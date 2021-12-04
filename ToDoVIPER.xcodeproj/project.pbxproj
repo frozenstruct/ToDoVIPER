@@ -9,14 +9,21 @@
 /* Begin PBXBuildFile section */
 		3FDCB9A82757403B00ACB317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9A72757403B00ACB317 /* AppDelegate.swift */; };
 		3FDCB9AA2757403B00ACB317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9A92757403B00ACB317 /* SceneDelegate.swift */; };
-		3FDCB9AC2757403B00ACB317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9AB2757403B00ACB317 /* ViewController.swift */; };
-		3FDCB9AF2757403B00ACB317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FDCB9AD2757403B00ACB317 /* Main.storyboard */; };
 		3FDCB9B22757403B00ACB317 /* ToDoVIPER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9B02757403B00ACB317 /* ToDoVIPER.xcdatamodeld */; };
 		3FDCB9B42757403D00ACB317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FDCB9B32757403D00ACB317 /* Assets.xcassets */; };
 		3FDCB9B72757403D00ACB317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FDCB9B52757403D00ACB317 /* LaunchScreen.storyboard */; };
-		3FDCB9C22757403D00ACB317 /* ToDoVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9C12757403D00ACB317 /* ToDoVIPERTests.swift */; };
 		3FDCB9CC2757403D00ACB317 /* ToDoVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9CB2757403D00ACB317 /* ToDoVIPERUITests.swift */; };
 		3FDCB9CE2757403D00ACB317 /* ToDoVIPERUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9CD2757403D00ACB317 /* ToDoVIPERUITestsLaunchTests.swift */; };
+		3FDCB9E42757449300ACB317 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9E32757449300ACB317 /* MainAssembler.swift */; };
+		3FDCB9E62757449E00ACB317 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9E52757449E00ACB317 /* MainViewController.swift */; };
+		3FDCB9E8275744A400ACB317 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9E7275744A400ACB317 /* MainPresenter.swift */; };
+		3FDCB9EA275744A900ACB317 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9E9275744A900ACB317 /* MainInteractor.swift */; };
+		3FDCB9EC275744B000ACB317 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9EB275744B000ACB317 /* MainRouter.swift */; };
+		3FDCB9F02757451000ACB317 /* MainAssemblyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9EF2757451000ACB317 /* MainAssemblyTests.swift */; };
+		3FDCB9F22757452500ACB317 /* MainInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9F12757452500ACB317 /* MainInteractorTests.swift */; };
+		3FDCB9F42757452D00ACB317 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9F32757452D00ACB317 /* MainPresenterTests.swift */; };
+		3FDCB9F62757453400ACB317 /* MainRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9F52757453400ACB317 /* MainRouterTests.swift */; };
+		3FDCB9F82757453D00ACB317 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9F72757453D00ACB317 /* MainViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,17 +47,24 @@
 		3FDCB9A42757403B00ACB317 /* ToDoVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDCB9A72757403B00ACB317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FDCB9A92757403B00ACB317 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3FDCB9AB2757403B00ACB317 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3FDCB9AE2757403B00ACB317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FDCB9B12757403B00ACB317 /* ToDoVIPER.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoVIPER.xcdatamodel; sourceTree = "<group>"; };
 		3FDCB9B32757403D00ACB317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FDCB9B62757403D00ACB317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FDCB9B82757403D00ACB317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDCB9BD2757403D00ACB317 /* ToDoVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FDCB9C12757403D00ACB317 /* ToDoVIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoVIPERTests.swift; sourceTree = "<group>"; };
 		3FDCB9C72757403D00ACB317 /* ToDoVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoVIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDCB9CB2757403D00ACB317 /* ToDoVIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoVIPERUITests.swift; sourceTree = "<group>"; };
 		3FDCB9CD2757403D00ACB317 /* ToDoVIPERUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoVIPERUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FDCB9E32757449300ACB317 /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
+		3FDCB9E52757449E00ACB317 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3FDCB9E7275744A400ACB317 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		3FDCB9E9275744A900ACB317 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		3FDCB9EB275744B000ACB317 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		3FDCB9EF2757451000ACB317 /* MainAssemblyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssemblyTests.swift; sourceTree = "<group>"; };
+		3FDCB9F12757452500ACB317 /* MainInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorTests.swift; sourceTree = "<group>"; };
+		3FDCB9F32757452D00ACB317 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
+		3FDCB9F52757453400ACB317 /* MainRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterTests.swift; sourceTree = "<group>"; };
+		3FDCB9F72757453D00ACB317 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +115,10 @@
 		3FDCB9A62757403B00ACB317 /* ToDoVIPER */ = {
 			isa = PBXGroup;
 			children = (
-				3FDCB9A72757403B00ACB317 /* AppDelegate.swift */,
-				3FDCB9A92757403B00ACB317 /* SceneDelegate.swift */,
-				3FDCB9AB2757403B00ACB317 /* ViewController.swift */,
-				3FDCB9AD2757403B00ACB317 /* Main.storyboard */,
-				3FDCB9B32757403D00ACB317 /* Assets.xcassets */,
-				3FDCB9B52757403D00ACB317 /* LaunchScreen.storyboard */,
-				3FDCB9B82757403D00ACB317 /* Info.plist */,
-				3FDCB9B02757403B00ACB317 /* ToDoVIPER.xcdatamodeld */,
+				3FDCB9DC275742CB00ACB317 /* Common */,
+				3FDCB9E12757446C00ACB317 /* CoreData */,
+				3FDCB9DA275742B600ACB317 /* Resources */,
+				3FDCB9DD2757433E00ACB317 /* VIPER */,
 			);
 			path = ToDoVIPER;
 			sourceTree = "<group>";
@@ -116,7 +126,11 @@
 		3FDCB9C02757403D00ACB317 /* ToDoVIPERTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FDCB9C12757403D00ACB317 /* ToDoVIPERTests.swift */,
+				3FDCB9EF2757451000ACB317 /* MainAssemblyTests.swift */,
+				3FDCB9F12757452500ACB317 /* MainInteractorTests.swift */,
+				3FDCB9F32757452D00ACB317 /* MainPresenterTests.swift */,
+				3FDCB9F52757453400ACB317 /* MainRouterTests.swift */,
+				3FDCB9F72757453D00ACB317 /* MainViewControllerTests.swift */,
 			);
 			path = ToDoVIPERTests;
 			sourceTree = "<group>";
@@ -128,6 +142,53 @@
 				3FDCB9CD2757403D00ACB317 /* ToDoVIPERUITestsLaunchTests.swift */,
 			);
 			path = ToDoVIPERUITests;
+			sourceTree = "<group>";
+		};
+		3FDCB9DA275742B600ACB317 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3FDCB9B32757403D00ACB317 /* Assets.xcassets */,
+				3FDCB9B82757403D00ACB317 /* Info.plist */,
+				3FDCB9B52757403D00ACB317 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3FDCB9DC275742CB00ACB317 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3FDCB9A72757403B00ACB317 /* AppDelegate.swift */,
+				3FDCB9A92757403B00ACB317 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3FDCB9DD2757433E00ACB317 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				3FDCB9DE2757434600ACB317 /* Main */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		3FDCB9DE2757434600ACB317 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3FDCB9E32757449300ACB317 /* MainAssembler.swift */,
+				3FDCB9E9275744A900ACB317 /* MainInteractor.swift */,
+				3FDCB9E7275744A400ACB317 /* MainPresenter.swift */,
+				3FDCB9EB275744B000ACB317 /* MainRouter.swift */,
+				3FDCB9E52757449E00ACB317 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3FDCB9E12757446C00ACB317 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3FDCB9B02757403B00ACB317 /* ToDoVIPER.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +262,7 @@
 					};
 					3FDCB9BC2757403D00ACB317 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 						TestTargetID = 3FDCB9A32757403B00ACB317;
 					};
 					3FDCB9C62757403D00ACB317 = {
@@ -236,7 +298,6 @@
 			files = (
 				3FDCB9B72757403D00ACB317 /* LaunchScreen.storyboard in Resources */,
 				3FDCB9B42757403D00ACB317 /* Assets.xcassets in Resources */,
-				3FDCB9AF2757403B00ACB317 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +322,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDCB9AC2757403B00ACB317 /* ViewController.swift in Sources */,
+				3FDCB9E42757449300ACB317 /* MainAssembler.swift in Sources */,
+				3FDCB9EC275744B000ACB317 /* MainRouter.swift in Sources */,
+				3FDCB9E8275744A400ACB317 /* MainPresenter.swift in Sources */,
 				3FDCB9A82757403B00ACB317 /* AppDelegate.swift in Sources */,
 				3FDCB9B22757403B00ACB317 /* ToDoVIPER.xcdatamodeld in Sources */,
 				3FDCB9AA2757403B00ACB317 /* SceneDelegate.swift in Sources */,
+				3FDCB9EA275744A900ACB317 /* MainInteractor.swift in Sources */,
+				3FDCB9E62757449E00ACB317 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDCB9C22757403D00ACB317 /* ToDoVIPERTests.swift in Sources */,
+				3FDCB9F42757452D00ACB317 /* MainPresenterTests.swift in Sources */,
+				3FDCB9F62757453400ACB317 /* MainRouterTests.swift in Sources */,
+				3FDCB9F02757451000ACB317 /* MainAssemblyTests.swift in Sources */,
+				3FDCB9F22757452500ACB317 /* MainInteractorTests.swift in Sources */,
+				3FDCB9F82757453D00ACB317 /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +370,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3FDCB9AD2757403B00ACB317 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FDCB9AE2757403B00ACB317 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3FDCB9B52757403D00ACB317 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -445,10 +506,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH9R39U9P3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoVIPER/Info.plist;
+				INFOPLIST_FILE = ToDoVIPER/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,10 +534,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH9R39U9P3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoVIPER/Info.plist;
+				INFOPLIST_FILE = ToDoVIPER/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -497,6 +558,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH9R39U9P3;
@@ -511,6 +573,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wcgb.2dvpr.ToDoVIPERTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoVIPER.app/ToDoVIPER";
@@ -522,6 +586,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH9R39U9P3;
@@ -536,6 +601,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wcgb.2dvpr.ToDoVIPERTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoVIPER.app/ToDoVIPER";

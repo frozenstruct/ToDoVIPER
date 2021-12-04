@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ToDoVIPERTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3FDCB9A32757403B00ACB317</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FDCB9BC2757403D00ACB317</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FDCB9C62757403D00ACB317</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
