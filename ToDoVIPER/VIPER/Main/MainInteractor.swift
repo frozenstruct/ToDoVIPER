@@ -11,5 +11,7 @@ protocol MainInteractorInput { }
 
 final class MainInteractor: MainInteractorInput {
 
-	var output: MainInteractorOutput?
+	var presenter: MainInteractorOutput?
+
+	var string: String = "let visi"
 }

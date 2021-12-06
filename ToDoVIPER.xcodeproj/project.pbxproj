@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6D0ECB275DDF9E001C72FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D0ECA275DDF9E001C72FA /* Main.storyboard */; };
 		3FDCB9A82757403B00ACB317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9A72757403B00ACB317 /* AppDelegate.swift */; };
 		3FDCB9AA2757403B00ACB317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9A92757403B00ACB317 /* SceneDelegate.swift */; };
 		3FDCB9B22757403B00ACB317 /* ToDoVIPER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9B02757403B00ACB317 /* ToDoVIPER.xcdatamodeld */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F6D0ECA275DDF9E001C72FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3FDCB9A42757403B00ACB317 /* ToDoVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDCB9A72757403B00ACB317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FDCB9A92757403B00ACB317 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F6D0EC9275DDF7D001C72FA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3FDCB9B52757403D00ACB317 /* LaunchScreen.storyboard */,
+				3F6D0ECA275DDF9E001C72FA /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		3FDCB99B2757403B00ACB317 = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +160,7 @@
 			children = (
 				3FDCB9B32757403D00ACB317 /* Assets.xcassets */,
 				3FDCB9B82757403D00ACB317 /* Info.plist */,
-				3FDCB9B52757403D00ACB317 /* LaunchScreen.storyboard */,
+				3F6D0EC9275DDF7D001C72FA /* Storyboards */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -296,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6D0ECB275DDF9E001C72FA /* Main.storyboard in Resources */,
 				3FDCB9B72757403D00ACB317 /* LaunchScreen.storyboard in Resources */,
 				3FDCB9B42757403D00ACB317 /* Assets.xcassets in Resources */,
 			);

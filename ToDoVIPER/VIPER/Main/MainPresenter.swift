@@ -13,6 +13,6 @@ protocol MainViewControllerOutput: AnyObject { }
 final class MainPresenter: MainInteractorOutput & MainViewControllerOutput {
 
 	var interactor: MainInteractorInput?
-	var viewController: MainViewControllerInput?
+	var view: MainViewControllerInput?
 	var router: MainRouterInput?
 }
