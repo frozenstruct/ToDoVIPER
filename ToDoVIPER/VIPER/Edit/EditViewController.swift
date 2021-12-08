@@ -10,7 +10,7 @@ import UIKit
 
 protocol EditViewControllerInput: AnyObject { }
 
-final class EditViewController: UITableViewController, EditViewControllerInput, UITableViewDragDelegate {
+final class EditViewController: UIViewController, EditViewControllerInput {
 
 	// MARK: - VIPER
 
@@ -18,88 +18,20 @@ final class EditViewController: UITableViewController, EditViewControllerInput, 
 
 	// MARK: - Props
 
-	var dataSource: [String] = ["awrge", "asrg", "aserg", "awegr", "awrg"]
+	@IBOutlet private weak var nameTextField: UITextField!
+	@IBOutlet private weak var statusTextField: UITextField!
+	@IBOutlet private weak var dueDateTextField: UITextField!
+	@IBOutlet private weak var estimationTextField: UITextField!
+	@IBOutlet private weak var subtasksTextField: UITextField!
+	@IBOutlet private weak var listTextField: UITextField!
+	@IBOutlet private weak var tagsTextField: UITextField!
+	@IBOutlet private weak var projectsTextField: UITextField!
+	@IBOutlet private weak var saveButton: UIButton!
 
-	// MARK: - Lifecycle
+	// MARK: - Methods
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-
-		navigationController?.navigationBar.isHidden = false
-		navigationController?.navigationBar.prefersLargeTitles = true
-
-		tableView.dragInteractionEnabled = true
-		tableView.dragDelegate = self
-
-		navigationItem.rightBarButtonItem = editButtonItem
-	}
-}
-
-// MARK: - TableView DataSource
-
-extension EditViewController {
-
-	override func numberOfSections(in tableView: UITableView) -> Int {
-		return 1
+	@IBAction func saveAction(_ sender: Any) {
+		dismiss(animated: true, completion: nil)
 	}
 
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return dataSource.count
-	}
-
-	override func tableView(
-		_ tableView: UITableView,
-		cellForRowAt indexPath: IndexPath
-	) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell")
-		else {
-			return UITableViewCell()
-		}
-
-		cell.textLabel?.text = dataSource[indexPath.row]
-
-		return cell
-	}
-}
-
-// MARK: - TableView Delegate
-
-extension EditViewController {
-
-	override func tableView(
-		_ tableView: UITableView,
-		commit editingStyle: UITableViewCell.EditingStyle,
-		forRowAt indexPath: IndexPath
-	) {
-		if editingStyle == .delete {
-			dataSource.remove(at: indexPath.row)
-			tableView.deleteRows(at: [indexPath], with: .fade)
-		}
-	}
-}
-
-// MARK: - TableView Drag & Drop
-
-extension EditViewController {
-
-	override func tableView(
-		_ tableView: UITableView,
-		moveRowAt sourceIndexPath: IndexPath,
-		to destinationIndexPath: IndexPath
-	) {
-		let mover = dataSource.remove(at: sourceIndexPath.row)
-		dataSource.insert(mover, at: destinationIndexPath.row)
-	}
-
-	func tableView(
-		_ tableView: UITableView,
-		itemsForBeginning session: UIDragSession,
-		at indexPath: IndexPath
-	) -> [UIDragItem] {
-		let currentItem = dataSource[indexPath.row]
-		let dragItem = UIDragItem(itemProvider: NSItemProvider())
-		dragItem.localObject = currentItem
-
-		return [dragItem]
-	}
 }
