@@ -57,6 +57,7 @@
 		3F29403E27608CFE0041738D /* EditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPresenter.swift; sourceTree = "<group>"; };
 		3F29404427608D8C0041738D /* EditAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAssembler.swift; sourceTree = "<group>"; };
 		3F29404627608DAA0041738D /* EditRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRouter.swift; sourceTree = "<group>"; };
+		3F294048276091F20041738D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3F6D0ECA275DDF9E001C72FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3FDCB9A42757403B00ACB317 /* ToDoVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDCB9A72757403B00ACB317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 		3FDCB99B2757403B00ACB317 = {
 			isa = PBXGroup;
 			children = (
+				3F294048276091F20041738D /* README.md */,
 				3FDCB9A62757403B00ACB317 /* ToDoVIPER */,
 				3FDCB9C02757403D00ACB317 /* ToDoVIPERTests */,
 				3FDCB9CA2757403D00ACB317 /* ToDoVIPERUITests */,
