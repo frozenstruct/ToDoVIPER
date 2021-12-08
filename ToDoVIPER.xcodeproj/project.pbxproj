@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3F29403027608C710041738D /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F29402F27608C710041738D /* Edit.storyboard */; };
+		3F29404027608CFE0041738D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403C27608CFE0041738D /* EditViewController.swift */; };
+		3F29404127608CFE0041738D /* EditInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403D27608CFE0041738D /* EditInteractor.swift */; };
+		3F29404227608CFE0041738D /* EditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403E27608CFE0041738D /* EditPresenter.swift */; };
+		3F29404527608D8C0041738D /* EditAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29404427608D8C0041738D /* EditAssembler.swift */; };
+		3F29404727608DAA0041738D /* EditRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29404627608DAA0041738D /* EditRouter.swift */; };
 		3F6D0ECB275DDF9E001C72FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D0ECA275DDF9E001C72FA /* Main.storyboard */; };
 		3FDCB9A82757403B00ACB317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9A72757403B00ACB317 /* AppDelegate.swift */; };
 		3FDCB9AA2757403B00ACB317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9A92757403B00ACB317 /* SceneDelegate.swift */; };
@@ -47,6 +52,11 @@
 
 /* Begin PBXFileReference section */
 		3F29402F27608C710041738D /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
+		3F29403C27608CFE0041738D /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		3F29403D27608CFE0041738D /* EditInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInteractor.swift; sourceTree = "<group>"; };
+		3F29403E27608CFE0041738D /* EditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPresenter.swift; sourceTree = "<group>"; };
+		3F29404427608D8C0041738D /* EditAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAssembler.swift; sourceTree = "<group>"; };
+		3F29404627608DAA0041738D /* EditRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRouter.swift; sourceTree = "<group>"; };
 		3F6D0ECA275DDF9E001C72FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3FDCB9A42757403B00ACB317 /* ToDoVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDCB9A72757403B00ACB317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +106,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F29403127608CA90041738D /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				3F29404427608D8C0041738D /* EditAssembler.swift */,
+				3F29403D27608CFE0041738D /* EditInteractor.swift */,
+				3F29403E27608CFE0041738D /* EditPresenter.swift */,
+				3F29404627608DAA0041738D /* EditRouter.swift */,
+				3F29403C27608CFE0041738D /* EditViewController.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
 		3F6D0EC9275DDF7D001C72FA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,14 +361,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F29404127608CFE0041738D /* EditInteractor.swift in Sources */,
 				3FDCB9E42757449300ACB317 /* MainAssembler.swift in Sources */,
 				3FDCB9EC275744B000ACB317 /* MainRouter.swift in Sources */,
 				3FDCB9E8275744A400ACB317 /* MainPresenter.swift in Sources */,
 				3FDCB9A82757403B00ACB317 /* AppDelegate.swift in Sources */,
 				3FDCB9B22757403B00ACB317 /* ToDoVIPER.xcdatamodeld in Sources */,
+				3F29404227608CFE0041738D /* EditPresenter.swift in Sources */,
+				3F29404027608CFE0041738D /* EditViewController.swift in Sources */,
 				3FDCB9AA2757403B00ACB317 /* SceneDelegate.swift in Sources */,
 				3FDCB9EA275744A900ACB317 /* MainInteractor.swift in Sources */,
+				3F29404527608D8C0041738D /* EditAssembler.swift in Sources */,
 				3FDCB9E62757449E00ACB317 /* MainViewController.swift in Sources */,
+				3F29404727608DAA0041738D /* EditRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
