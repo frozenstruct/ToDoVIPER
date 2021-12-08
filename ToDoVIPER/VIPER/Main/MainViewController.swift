@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 protocol MainViewControllerInput: AnyObject { }
+typealias TableViewDragging =  UITableViewDragDelegate
 
-
-final class MainViewController: UITableViewController, MainViewControllerInput {
+final class MainViewController: UITableViewController, MainViewControllerInput, UITableViewDragDelegate {
 
 	// MARK: - VIPER
 
@@ -29,6 +29,10 @@ final class MainViewController: UITableViewController, MainViewControllerInput {
 		navigationController?.navigationBar.isHidden = false
 		navigationController?.navigationBar.prefersLargeTitles = true
 
+		tableView.dragInteractionEnabled = true
+		tableView.dragDelegate = self
+
+		navigationItem.rightBarButtonItem = editButtonItem
 	}
 }
 
@@ -56,5 +60,47 @@ extension MainViewController {
 		cell.textLabel?.text = dataSource[indexPath.row]
 
 		return cell
+	}
+}
+
+// MARK: - TableView Delegate
+
+extension MainViewController {
+
+	override func tableView(
+		_ tableView: UITableView,
+		commit editingStyle: UITableViewCell.EditingStyle,
+		forRowAt indexPath: IndexPath
+	) {
+		if editingStyle == .delete {
+			dataSource.remove(at: indexPath.row)
+			tableView.deleteRows(at: [indexPath], with: .fade)
+		}
+	}
+}
+
+// MARK: - TableView Drag & Drop
+
+extension MainViewController {
+
+	override func tableView(
+		_ tableView: UITableView,
+		moveRowAt sourceIndexPath: IndexPath,
+		to destinationIndexPath: IndexPath
+	) {
+		let mover = dataSource.remove(at: sourceIndexPath.row)
+		dataSource.insert(mover, at: destinationIndexPath.row)
+	}
+
+	func tableView(
+		_ tableView: UITableView,
+		itemsForBeginning session: UIDragSession,
+		at indexPath: IndexPath
+	) -> [UIDragItem] {
+		let currentItem = dataSource[indexPath.row]
+		let dragItem = UIDragItem(itemProvider: NSItemProvider())
+		dragItem.localObject = currentItem
+
+		return [dragItem]
 	}
 }
