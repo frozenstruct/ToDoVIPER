@@ -9,6 +9,7 @@ Specs:
 Roadmap:
 - [] UI
 - [] CoreData
+- [] Strings to Enums
 - [] Arch
 - [] CleanCode
 - [] SOLID
