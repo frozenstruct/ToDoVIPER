@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F29403027608C710041738D /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F29402F27608C710041738D /* Edit.storyboard */; };
 		3F29404027608CFE0041738D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403C27608CFE0041738D /* EditViewController.swift */; };
 		3F29404127608CFE0041738D /* EditInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403D27608CFE0041738D /* EditInteractor.swift */; };
 		3F29404227608CFE0041738D /* EditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403E27608CFE0041738D /* EditPresenter.swift */; };
@@ -31,6 +30,7 @@
 		3FDCB9F42757452D00ACB317 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9F32757452D00ACB317 /* MainPresenterTests.swift */; };
 		3FDCB9F62757453400ACB317 /* MainRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9F52757453400ACB317 /* MainRouterTests.swift */; };
 		3FDCB9F82757453D00ACB317 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9F72757453D00ACB317 /* MainViewControllerTests.swift */; };
+		3FEE8E2A27648B24009CF1A0 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE8E2927648B24009CF1A0 /* EditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F29402F27608C710041738D /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
 		3F29403C27608CFE0041738D /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		3F29403D27608CFE0041738D /* EditInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInteractor.swift; sourceTree = "<group>"; };
 		3F29403E27608CFE0041738D /* EditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPresenter.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		3FDCB9F32757452D00ACB317 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
 		3FDCB9F52757453400ACB317 /* MainRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterTests.swift; sourceTree = "<group>"; };
 		3FDCB9F72757453D00ACB317 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		3FEE8E2927648B24009CF1A0 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,6 @@
 			children = (
 				3FDCB9B52757403D00ACB317 /* LaunchScreen.storyboard */,
 				3F6D0ECA275DDF9E001C72FA /* Main.storyboard */,
-				3F29402F27608C710041738D /* Edit.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -153,6 +152,7 @@
 		3FDCB9A62757403B00ACB317 /* ToDoVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				3FEE8E2D27648D6B009CF1A0 /* Lib */,
 				3FDCB9DC275742CB00ACB317 /* Common */,
 				3FDCB9E12757446C00ACB317 /* CoreData */,
 				3FDCB9DA275742B600ACB317 /* Resources */,
@@ -188,6 +188,7 @@
 				3FDCB9B32757403D00ACB317 /* Assets.xcassets */,
 				3FDCB9B82757403D00ACB317 /* Info.plist */,
 				3F6D0EC9275DDF7D001C72FA /* Storyboards */,
+				3FEE8E2827648B0B009CF1A0 /* XIBs */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -228,6 +229,21 @@
 				3FDCB9B02757403B00ACB317 /* ToDoVIPER.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3FEE8E2827648B0B009CF1A0 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				3FEE8E2927648B24009CF1A0 /* EditViewController.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		3FEE8E2D27648D6B009CF1A0 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +353,7 @@
 			files = (
 				3F6D0ECB275DDF9E001C72FA /* Main.storyboard in Resources */,
 				3FDCB9B72757403D00ACB317 /* LaunchScreen.storyboard in Resources */,
-				3F29403027608C710041738D /* Edit.storyboard in Resources */,
+				3FEE8E2A27648B24009CF1A0 /* EditViewController.xib in Resources */,
 				3FDCB9B42757403D00ACB317 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
