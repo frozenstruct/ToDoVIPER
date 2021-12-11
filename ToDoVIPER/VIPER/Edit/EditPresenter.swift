@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol EditInteractorOutput { }
+protocol EditInteractorOutput: AnyObject { }
 protocol EditViewControllerOutput: AnyObject { }
 
 final class EditPresenter: EditInteractorOutput & EditViewControllerOutput {

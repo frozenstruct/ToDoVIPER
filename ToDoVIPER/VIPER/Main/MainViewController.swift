@@ -5,7 +5,7 @@
 //  Created by Dmitry Aksyonov on 01.12.2021.
 //
 
-import Foundation
+import CoreData
 import UIKit
 
 protocol MainViewControllerInput: AnyObject { }
@@ -17,9 +17,9 @@ final class MainViewController: UITableViewController, MainViewControllerInput, 
 
 	var presenter: MainViewControllerOutput?
 
-	// MARK: - Props
+	// MARK: - Properties
 
-	var dataSource: [String] = ["awrge", "asrg", "aserg", "awegr", "awrg"]
+	private var dataSource: [NSManagedObject] = []
 
 	// MARK: - Lifecycle
 
@@ -33,6 +33,12 @@ final class MainViewController: UITableViewController, MainViewControllerInput, 
 		tableView.dragDelegate = self
 
 		navigationItem.rightBarButtonItem = editButtonItem
+	}
+
+	// MARK: - Methods
+
+	@IBAction func createNewToDo(_ sender: Any) {
+		presenter?.routeToEditScene(from: self, to: .create)
 	}
 }
 
@@ -57,7 +63,12 @@ extension MainViewController {
 			return UITableViewCell()
 		}
 
-		cell.textLabel?.text = dataSource[indexPath.row]
+		let toDo = dataSource[indexPath.row]
+		let toDoName = toDo.value(forKeyPath: "name") as? String
+		let toDoDueDate = toDo.value(forKeyPath: "dueDate") as? String
+
+		cell.textLabel?.text = toDoName
+		cell.detailTextLabel?.text = toDoDueDate
 
 		return cell
 	}
@@ -76,6 +87,10 @@ extension MainViewController {
 			dataSource.remove(at: indexPath.row)
 			tableView.deleteRows(at: [indexPath], with: .fade)
 		}
+	}
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		presenter?.routeToEditScene(from: self, to: .edit)
 	}
 }
 

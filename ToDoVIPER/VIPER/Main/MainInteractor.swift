@@ -6,12 +6,11 @@
 //
 
 import Foundation
+import CoreData
 
-protocol MainInteractorInput { }
+protocol MainInteractorInput:AnyObject { }
 
 final class MainInteractor: MainInteractorInput {
 
 	var presenter: MainInteractorOutput?
-
-	var string: String = "let visi"
 }

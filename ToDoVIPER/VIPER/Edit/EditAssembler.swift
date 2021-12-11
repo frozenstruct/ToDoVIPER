@@ -9,16 +9,8 @@ import UIKit
 
 final class EditAssembler {
 
-	func make() -> UIViewController {
-		guard let view = UIStoryboard.init(
-			name: "Edit", bundle: nil
-		).instantiateViewController(
-			withIdentifier: "EditVC"
-		) as? EditViewController
-		else {
-			return UIViewController()
-		}
-
+	func make(mode: EditViewController.Mode) -> UIViewController {
+		let view = EditViewController(mode: mode)
 		let interactor = EditInteractor()
 		let presenter = EditPresenter()
 		let router = EditRouter()

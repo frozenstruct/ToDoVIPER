@@ -7,11 +7,9 @@
 
 import Foundation
 
-protocol EditInteractorInput { }
+protocol EditInteractorInput: AnyObject { }
 
 final class EditInteractor: EditInteractorInput {
 
 	var presenter: EditInteractorOutput?
-
-	var string: String = "let visi"
 }

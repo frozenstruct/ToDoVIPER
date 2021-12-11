@@ -6,7 +6,27 @@
 //
 
 import Foundation
+import UIKit
 
-protocol MainRouterInput: AnyObject { }
+protocol MainRouterInput: AnyObject {
 
-final class MainRouter: MainRouterInput { }
+	func routeToEditScene(
+		from view: UIViewController,
+		to mode: EditViewController.Mode
+	)
+}
+
+final class MainRouter: MainRouterInput {
+
+}
+
+extension MainRouter {
+
+	func routeToEditScene(
+		from view: UIViewController,
+		to mode: EditViewController.Mode
+	) {
+		let viewController = EditAssembler().make(mode: mode)
+		view.present(viewController, animated: true, completion: nil)
+	}
+}

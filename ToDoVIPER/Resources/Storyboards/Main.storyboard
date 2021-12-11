@@ -39,9 +39,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="wnS-aL-q1J" kind="presentation" id="h2B-DS-S0N"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,7 +46,13 @@
                             <outlet property="delegate" destination="Yfe-ON-Zno" id="3FL-ym-kY7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDo List" largeTitleDisplayMode="always" id="GyN-zB-0EI"/>
+                    <navigationItem key="navigationItem" title="ToDo List" largeTitleDisplayMode="always" id="GyN-zB-0EI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="WsV-oV-9PT">
+                            <connections>
+                                <action selector="createNewToDo:" destination="Yfe-ON-Zno" id="NBN-al-CDe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -57,14 +60,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moG-Az-hSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="757.97101449275374" y="124.55357142857142"/>
-        </scene>
-        <!--Edit-->
-        <scene sceneID="wvt-bf-xRQ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Edit" id="wnS-aL-q1J" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dwq-YO-AfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1460.8695652173915" y="124.55357142857142"/>
         </scene>
     </scenes>
     <resources>
