@@ -14,7 +14,7 @@ final class MainRouterTests: XCTestCase {
 	
 	// MARK: - SUT
 	
-	// MARK: - Lifecycle
+	// MARK: - Life Cycle
 	
 	override func setUp() {
 		super.setUp()

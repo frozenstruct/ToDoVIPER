@@ -21,7 +21,7 @@ final class MainViewController: UITableViewController, MainViewControllerInput, 
 
 	private var dataSource: [NSManagedObject] = []
 
-	// MARK: - Lifecycle
+	// MARK: - Life Cycle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

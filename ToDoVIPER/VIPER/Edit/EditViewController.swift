@@ -57,7 +57,7 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 		super.init(coder: coder)
 	}
 
-	// MARK: - View Lifecycle
+	// MARK: - View Life Cycle
 
 	override class func awakeFromNib() {
 		super.awakeFromNib()
