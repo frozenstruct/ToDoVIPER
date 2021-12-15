@@ -31,6 +31,7 @@
 		3FDCB9F62757453400ACB317 /* MainRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9F52757453400ACB317 /* MainRouterTests.swift */; };
 		3FDCB9F82757453D00ACB317 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9F72757453D00ACB317 /* MainViewControllerTests.swift */; };
 		3FEE8E2A27648B24009CF1A0 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE8E2927648B24009CF1A0 /* EditViewController.xib */; };
+		3FEE8E3427649DC3009CF1A0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE8E3327649DC3009CF1A0 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		3FDCB9F52757453400ACB317 /* MainRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterTests.swift; sourceTree = "<group>"; };
 		3FDCB9F72757453D00ACB317 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		3FEE8E2927648B24009CF1A0 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		3FEE8E3327649DC3009CF1A0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 		3FEE8E2D27648D6B009CF1A0 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3FEE8E3327649DC3009CF1A0 /* Strings.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				3FDCB9E8275744A400ACB317 /* MainPresenter.swift in Sources */,
 				3FDCB9A82757403B00ACB317 /* AppDelegate.swift in Sources */,
 				3FDCB9B22757403B00ACB317 /* ToDoVIPER.xcdatamodeld in Sources */,
+				3FEE8E3427649DC3009CF1A0 /* Strings.swift in Sources */,
 				3F29404227608CFE0041738D /* EditPresenter.swift in Sources */,
 				3F29404027608CFE0041738D /* EditViewController.swift in Sources */,
 				3FDCB9AA2757403B00ACB317 /* SceneDelegate.swift in Sources */,

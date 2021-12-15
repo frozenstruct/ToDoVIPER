@@ -26,6 +26,8 @@ final class MainViewController: UITableViewController, MainViewControllerInput, 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		fetchCoreData()
+
 		navigationController?.navigationBar.isHidden = false
 		navigationController?.navigationBar.prefersLargeTitles = true
 
@@ -37,8 +39,27 @@ final class MainViewController: UITableViewController, MainViewControllerInput, 
 
 	// MARK: - Methods
 
-	@IBAction func createNewToDo(_ sender: Any) {
+	@IBAction private func createNewToDo(_ sender: Any) {
 		presenter?.routeToEditScene(from: self, to: .create)
+	}
+
+	private func fetchCoreData() {
+		guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
+		else {
+			return
+		}
+
+		let managedContext = appDelegate.persistentContainer.viewContext
+
+		let fetchRequest = NSFetchRequest<NSManagedObject>(
+			entityName: Strings.ToDoItemModel.entity.rawValue
+		)
+
+		do {
+			dataSource = try managedContext.fetch(fetchRequest)
+		} catch let error as NSError {
+			print("\(error), \(error.userInfo)")
+		}
 	}
 }
 
