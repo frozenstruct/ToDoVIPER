@@ -19,7 +19,7 @@ final class MainAssembler {
 			return UIViewController()
 		}
 
-		let interactor = MainInteractor()
+		let interactor = MainInteractor(coreDataWorker: .shared)
 		let presenter = MainPresenter()
 		let router = MainRouter()
 

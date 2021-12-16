@@ -11,7 +11,7 @@ final class EditAssembler {
 
 	func make(mode: EditViewController.Mode) -> UIViewController {
 		let view = EditViewController(mode: mode)
-		let interactor = EditInteractor()
+		let interactor = EditInteractor(coreDataWorker: .shared)
 		let presenter = EditPresenter()
 		let router = EditRouter()
 

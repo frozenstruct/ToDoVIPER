@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1D598D276B118800565A6E /* CoreDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D598C276B118800565A6E /* CoreDataWorker.swift */; };
 		3F29404027608CFE0041738D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403C27608CFE0041738D /* EditViewController.swift */; };
 		3F29404127608CFE0041738D /* EditInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403D27608CFE0041738D /* EditInteractor.swift */; };
 		3F29404227608CFE0041738D /* EditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403E27608CFE0041738D /* EditPresenter.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1D598C276B118800565A6E /* CoreDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWorker.swift; sourceTree = "<group>"; };
 		3F29403C27608CFE0041738D /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		3F29403D27608CFE0041738D /* EditInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInteractor.swift; sourceTree = "<group>"; };
 		3F29403E27608CFE0041738D /* EditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPresenter.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				3FEE8E3327649DC3009CF1A0 /* Strings.swift */,
+				3F1D598C276B118800565A6E /* CoreDataWorker.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				3FDCB9EC275744B000ACB317 /* MainRouter.swift in Sources */,
 				3FDCB9E8275744A400ACB317 /* MainPresenter.swift in Sources */,
 				3FDCB9A82757403B00ACB317 /* AppDelegate.swift in Sources */,
+				3F1D598D276B118800565A6E /* CoreDataWorker.swift in Sources */,
 				3FDCB9B22757403B00ACB317 /* ToDoVIPER.xcdatamodeld in Sources */,
 				3FEE8E3427649DC3009CF1A0 /* Strings.swift in Sources */,
 				3F29404227608CFE0041738D /* EditPresenter.swift in Sources */,

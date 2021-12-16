@@ -8,9 +8,20 @@
 import Foundation
 import CoreData
 
-protocol MainInteractorInput:AnyObject { }
+protocol MainInteractorInput:AnyObject {
+
+	
+}
 
 final class MainInteractor: MainInteractorInput {
 
 	var presenter: MainInteractorOutput?
+
+	private var coreDataWorker: CoreDataWorker
+
+	init(coreDataWorker: CoreDataWorker) {
+		self.coreDataWorker = coreDataWorker
+	}
+
+	
 }

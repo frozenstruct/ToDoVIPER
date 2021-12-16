@@ -11,5 +11,5 @@ Roadmap:
 - [] CoreData
 - [] Strings to Enums
 - [] Arch
-- [] CleanCode
+- [] CleanCode (by the book)
 - [] SOLID
