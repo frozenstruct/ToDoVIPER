@@ -39,7 +39,7 @@ final class CoreDataWorker: CoreDataWorkerProtocol {
 
 	// MARK: - Fetch
 
-	private func fetchCoreData() {
+	func fetchCoreData(_ completion: ([NSManagedObject]) -> Void) {
 		guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
 		else {
 			return
@@ -53,6 +53,7 @@ final class CoreDataWorker: CoreDataWorkerProtocol {
 
 		do {
 			dataSource = try managedContext.fetch(fetchRequest)
+			completion(dataSource)
 		} catch let error as NSError {
 			print("\(error), \(error.userInfo)")
 		}

@@ -8,7 +8,10 @@
 import CoreData
 import UIKit
 
-protocol MainViewControllerInput: AnyObject { }
+protocol MainViewControllerInput: AnyObject {
+	func presentCoreData(_ data: [NSManagedObject])
+}
+
 typealias TableViewDragging =  UITableViewDragDelegate
 
 final class MainViewController: UITableViewController, MainViewControllerInput, UITableViewDragDelegate {
@@ -26,7 +29,7 @@ final class MainViewController: UITableViewController, MainViewControllerInput, 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		
+		presenter?.fetchCoreData()
 
 		navigationController?.navigationBar.isHidden = false
 		navigationController?.navigationBar.prefersLargeTitles = true
@@ -119,5 +122,11 @@ extension MainViewController {
 		dragItem.localObject = currentItem
 
 		return [dragItem]
+	}
+}
+
+extension MainViewController {
+	func presentCoreData(_ data: [NSManagedObject]) {
+		dataSource = data
 	}
 }

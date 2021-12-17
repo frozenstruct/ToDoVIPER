@@ -7,8 +7,12 @@
 
 import Foundation
 import UIKit
+import CoreData
 
-protocol MainInteractorOutput: AnyObject { }
+protocol MainInteractorOutput: AnyObject {
+
+	func presentCoreData(_ data: [NSManagedObject])
+}
 
 protocol MainViewControllerOutput: AnyObject {
 
@@ -16,6 +20,8 @@ protocol MainViewControllerOutput: AnyObject {
 		from view: UIViewController,
 		to mode: EditViewController.Mode
 	)
+
+	func fetchCoreData()
 }
 
 final class MainPresenter: MainInteractorOutput & MainViewControllerOutput {
@@ -35,5 +41,13 @@ extension MainPresenter {
 			from: view,
 			to: mode
 		)
+	}
+
+	func fetchCoreData() {
+		interactor?.fetchCoreData()
+	}
+
+	func presentCoreData(_ data: [NSManagedObject]) {
+		view?.presentCoreData(data)
 	}
 }

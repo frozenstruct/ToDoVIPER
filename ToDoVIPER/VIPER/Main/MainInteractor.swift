@@ -10,10 +10,11 @@ import CoreData
 
 protocol MainInteractorInput:AnyObject {
 
+	func fetchCoreData()
 	
 }
 
-final class MainInteractor: MainInteractorInput {
+final class MainInteractor {
 
 	var presenter: MainInteractorOutput?
 
@@ -23,5 +24,14 @@ final class MainInteractor: MainInteractorInput {
 		self.coreDataWorker = coreDataWorker
 	}
 
-	
+
+}
+
+extension MainInteractor: MainInteractorInput {
+
+	func fetchCoreData() {
+		coreDataWorker.fetchCoreData { data in
+			presenter?.presentCoreData(data)
+		}
+	}
 }

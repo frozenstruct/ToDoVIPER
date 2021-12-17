@@ -13,3 +13,4 @@ Roadmap:
 - [] Arch
 - [] CleanCode (by the book)
 - [] SOLID
+- [] retain cycles
