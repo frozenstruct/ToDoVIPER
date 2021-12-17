@@ -1,10 +1,13 @@
-#  YetAnotherToDoList
+#  VIPERToDoList
 
 Specs:
 - VIPER
 - CleanSwift
 - CoreData
 - TableViewDrag
+
+Project Reference:
+https://github.com/users/daksyonov/projects/2/views/1
 
 Roadmap:
 - [] UI

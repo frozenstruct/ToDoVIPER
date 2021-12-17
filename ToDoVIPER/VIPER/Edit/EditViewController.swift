@@ -87,8 +87,11 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 
 	// TODO: - To Interactor
 	@IBAction func saveAction(_ sender: Any) {
-		let rawValues = getOutletValues()
-		
+		let itemToSave = getOutletValues()
+
+		presenter.saveToCoreData(
+			itemToSave
+		)
 
 		dismiss(animated: true, completion: nil)
 	}

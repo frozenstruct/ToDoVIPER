@@ -10,9 +10,11 @@ import Foundation
 protocol EditInteractorInput: AnyObject {
 
 	func getRawValuesFromView(_ values: RawInputValues)
+
+	func saveToCoreData(data: RawInputValues)
 }
 
-final class EditInteractor: EditInteractorInput {
+final class EditInteractor{
 
 	var presenter: EditInteractorOutput?
 
@@ -21,8 +23,15 @@ final class EditInteractor: EditInteractorInput {
 	init(coreDataWorker: CoreDataWorker) {
 		self.coreDataWorker = coreDataWorker
 	}
+}
+
+extension EditInteractor: EditInteractorInput {
 
 	func getRawValuesFromView(_ values: RawInputValues) {
 		coreDataWorker.rawValues = values
+	}
+
+	func saveToCoreData(data: RawInputValues) {
+		coreDataWorker.saveToContext(data: data)
 	}
 }

@@ -8,11 +8,21 @@
 import Foundation
 
 protocol EditInteractorOutput: AnyObject { }
-protocol EditViewControllerOutput: AnyObject { }
+protocol EditViewControllerOutput: AnyObject {
+
+	func saveToCoreData(data: RawInputValues)
+}
 
 final class EditPresenter: EditInteractorOutput & EditViewControllerOutput {
 
 	var interactor: EditInteractorInput?
 	var view: EditViewControllerInput?
 	var router: EditRouterInput?
+}
+
+extension EditInteractorOutput {
+
+	func saveToCoreData(data: RawInputValues) {
+		interactor.saveToCoreData(data: data)
+	}
 }

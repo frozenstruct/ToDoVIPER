@@ -61,7 +61,12 @@ final class CoreDataWorker: CoreDataWorkerProtocol {
 
 	// MARK: - Save
 
-	func saveToContext() {
+	func saveToContext(data: RawInputValues) {
+
+		// TODO: - Refactor
+		/// https://github.com/daksyonov/ToDoVIPER/issues/3
+		self.rawValues = data
+
 		guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
 		else {
 			return
