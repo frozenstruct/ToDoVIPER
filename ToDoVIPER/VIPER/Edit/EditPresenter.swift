@@ -13,16 +13,16 @@ protocol EditViewControllerOutput: AnyObject {
 	func saveToCoreData(data: RawInputValues)
 }
 
-final class EditPresenter: EditInteractorOutput & EditViewControllerOutput {
+final class EditPresenter: EditViewControllerOutput {
 
 	var interactor: EditInteractorInput?
 	var view: EditViewControllerInput?
 	var router: EditRouterInput?
 }
 
-extension EditInteractorOutput {
+extension EditPresenter: EditInteractorOutput {
 
 	func saveToCoreData(data: RawInputValues) {
-		interactor.saveToCoreData(data: data)
+		interactor?.saveToCoreData(data: data)
 	}
 }

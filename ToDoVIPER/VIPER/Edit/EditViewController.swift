@@ -89,42 +89,26 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 	@IBAction func saveAction(_ sender: Any) {
 		let itemToSave = getOutletValues()
 
-		presenter.saveToCoreData(
-			itemToSave
+		presenter?.saveToCoreData(
+			data: itemToSave
 		)
 
 		dismiss(animated: true, completion: nil)
 	}
 
-
-	// TODO: - To Interactor
-	// TODO: 	- To Worker
 	private func getOutletValues() -> RawInputValues {
 		let name = nameTextField.text ?? ""
 		let done = statusTextField.text ?? ""
 		let dueDate = dueDateTextField.text ?? ""
-		let estimation = estimationTextField.text ?? ""
 		let subtasks = subtasksTextField.text ?? ""
-		let list = listTextField.text ?? ""
-		let tags = tagsTextField.text ?? ""
-		let projects = projectsTextField.text ?? ""
 
-		// TODO: - Make Typealias
-		let rawValues = (
+		let rawValues: RawInputValues = (
 			name: name,
 			done: done,
 			dueDate: dueDate,
-			estimation: estimation,
-			list: list,
-			projects: projects,
-			subtasks: subtasks,
-			tags: tags
+			subtasks: subtasks
 		)
 
 		return rawValues
 	}
-
-
-
-
 }

@@ -12,11 +12,7 @@ typealias RawInputValues = (
 	name: String,
 	done: String,
 	dueDate: String,
-	estimation: String,
-	list: String,
-	projects: String,
-	subtasks: String,
-	tags: String
+	subtasks: String
 )
 
 protocol CoreDataWorkerProtocol: AnyObject {
@@ -109,23 +105,22 @@ final class CoreDataWorker: CoreDataWorkerProtocol {
 		let name = rawData.name
 		let done = toBool(rawData.done)
 		let dueDate = toDate(rawData.dueDate)
-		let estimation = Int(rawData.estimation) ?? 0
+
 
 		// TODO: - Finish here
 		let list = Int.random(in: 0...100)
 		let subtasks = Int.random(in: 0...100)
-		let tags = Int.random(in: 0...100)
-		let projects = Int.random(in: 0...100)
+
 
 		return [
 			Strings.ToDoItemModel.done.rawValue : done,
 			Strings.ToDoItemModel.dueDate.rawValue : dueDate,
-			Strings.ToDoItemModel.estimation.rawValue : estimation,
+
 			Strings.ToDoItemModel.list.rawValue : list,
 			Strings.ToDoItemModel.name.rawValue : name,
-			Strings.ToDoItemModel.projects.rawValue : projects,
-			Strings.ToDoItemModel.subtasks.rawValue : subtasks,
-			Strings.ToDoItemModel.tags.rawValue : tags,
+
+			Strings.ToDoItemModel.subtasks.rawValue : subtasks
+
 		]
 	}
 
