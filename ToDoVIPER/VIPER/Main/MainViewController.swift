@@ -43,7 +43,7 @@ final class MainViewController: UITableViewController, MainViewControllerInput, 
 	// MARK: - Methods
 
 	@IBAction private func createNewToDo(_ sender: Any) {
-		presenter?.routeToEditScene(from: self, to: .create)
+		presenter?.routeToEditScene(from: self, to: .create, with: nil)
 	}
 }
 
@@ -95,7 +95,17 @@ extension MainViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		presenter?.routeToEditScene(from: self, to: .edit)
+
+		let idx = indexPath.row
+		let currentData = dataSource[indexPath.row]
+		let transferObject = CoreDataRelayContainer(object: currentData as! ToDoItem, idx: idx)
+
+		presenter?.routeToEditScene(
+			from: self,
+			to: .edit,
+			with: transferObject
+		)
+
 	}
 }
 

@@ -24,7 +24,6 @@ final class MainInteractor {
 		self.coreDataWorker = coreDataWorker
 	}
 
-
 }
 
 extension MainInteractor: MainInteractorInput {

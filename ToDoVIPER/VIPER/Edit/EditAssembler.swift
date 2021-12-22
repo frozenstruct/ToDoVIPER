@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import CoreData
 
 final class EditAssembler {
 
-	func make(mode: EditViewController.Mode) -> UIViewController {
-		let view = EditViewController(mode: mode)
+	func make(
+		mode: EditViewController.Mode,
+		data: CoreDataRelayContainer? = nil
+	) -> UIViewController {
+		let view = EditViewController(
+			mode: mode,
+			data: data
+		)
 		let interactor = EditInteractor(coreDataWorker: .shared)
 		let presenter = EditPresenter()
 		let router = EditRouter()

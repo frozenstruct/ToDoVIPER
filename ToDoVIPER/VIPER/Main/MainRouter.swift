@@ -7,12 +7,14 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 protocol MainRouterInput: AnyObject {
 
 	func routeToEditScene(
 		from view: UIViewController,
-		to mode: EditViewController.Mode
+		to mode: EditViewController.Mode,
+		with data: CoreDataRelayContainer?
 	)
 }
 
@@ -24,9 +26,13 @@ extension MainRouter {
 
 	func routeToEditScene(
 		from view: UIViewController,
-		to mode: EditViewController.Mode
+		to mode: EditViewController.Mode,
+		with data: CoreDataRelayContainer? = nil
 	) {
-		let viewController = EditAssembler().make(mode: mode)
+		let viewController = EditAssembler().make(
+			mode: mode,
+			data: data
+		)
 		view.present(viewController, animated: true, completion: nil)
 	}
 }

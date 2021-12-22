@@ -13,10 +13,15 @@
 		3F29404227608CFE0041738D /* EditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29403E27608CFE0041738D /* EditPresenter.swift */; };
 		3F29404527608D8C0041738D /* EditAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29404427608D8C0041738D /* EditAssembler.swift */; };
 		3F29404727608DAA0041738D /* EditRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29404627608DAA0041738D /* EditRouter.swift */; };
+		3F58EAD0276F951E00CBACAC /* ToDoItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCA832276F89FB0044024F /* ToDoItem+CoreDataClass.swift */; };
+		3F58EAD1276F953700CBACAC /* ToDoItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCA833276F89FB0044024F /* ToDoItem+CoreDataProperties.swift */; };
+		3F58EAD4276F962200CBACAC /* Subtask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCA831276F89FB0044024F /* Subtask+CoreDataProperties.swift */; };
+		3F58EAD5276F962200CBACAC /* Subtask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCA830276F89FB0044024F /* Subtask+CoreDataClass.swift */; };
+		3F58EAD72770595100CBACAC /* CoreDataRelayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58EAD62770595100CBACAC /* CoreDataRelayContainer.swift */; };
 		3F6D0ECB275DDF9E001C72FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D0ECA275DDF9E001C72FA /* Main.storyboard */; };
+		3F7E3C5A276F8E5500EB912E /* ToDoVIPER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9B02757403B00ACB317 /* ToDoVIPER.xcdatamodeld */; };
 		3FDCB9A82757403B00ACB317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9A72757403B00ACB317 /* AppDelegate.swift */; };
 		3FDCB9AA2757403B00ACB317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9A92757403B00ACB317 /* SceneDelegate.swift */; };
-		3FDCB9B22757403B00ACB317 /* ToDoVIPER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9B02757403B00ACB317 /* ToDoVIPER.xcdatamodeld */; };
 		3FDCB9B42757403D00ACB317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FDCB9B32757403D00ACB317 /* Assets.xcassets */; };
 		3FDCB9B72757403D00ACB317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FDCB9B52757403D00ACB317 /* LaunchScreen.storyboard */; };
 		3FDCB9CC2757403D00ACB317 /* ToDoVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCB9CB2757403D00ACB317 /* ToDoVIPERUITests.swift */; };
@@ -60,7 +65,12 @@
 		3F29404427608D8C0041738D /* EditAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAssembler.swift; sourceTree = "<group>"; };
 		3F29404627608DAA0041738D /* EditRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRouter.swift; sourceTree = "<group>"; };
 		3F294048276091F20041738D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3F58EAD62770595100CBACAC /* CoreDataRelayContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRelayContainer.swift; sourceTree = "<group>"; };
 		3F6D0ECA275DDF9E001C72FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3FDCA830276F89FB0044024F /* Subtask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subtask+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3FDCA831276F89FB0044024F /* Subtask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subtask+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3FDCA832276F89FB0044024F /* ToDoItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3FDCA833276F89FB0044024F /* ToDoItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3FDCB9A42757403B00ACB317 /* ToDoVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDCB9A72757403B00ACB317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FDCB9A92757403B00ACB317 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +140,24 @@
 				3F6D0ECA275DDF9E001C72FA /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3FDCA838276F8BFC0044024F /* ToDoItem */ = {
+			isa = PBXGroup;
+			children = (
+				3FDCA832276F89FB0044024F /* ToDoItem+CoreDataClass.swift */,
+				3FDCA833276F89FB0044024F /* ToDoItem+CoreDataProperties.swift */,
+			);
+			path = ToDoItem;
+			sourceTree = "<group>";
+		};
+		3FDCA839276F8C040044024F /* Subtask */ = {
+			isa = PBXGroup;
+			children = (
+				3FDCA830276F89FB0044024F /* Subtask+CoreDataClass.swift */,
+				3FDCA831276F89FB0044024F /* Subtask+CoreDataProperties.swift */,
+			);
+			path = Subtask;
 			sourceTree = "<group>";
 		};
 		3FDCB99B2757403B00ACB317 = {
@@ -230,6 +258,8 @@
 		3FDCB9E12757446C00ACB317 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3FDCA839276F8C040044024F /* Subtask */,
+				3FDCA838276F8BFC0044024F /* ToDoItem */,
 				3FDCB9B02757403B00ACB317 /* ToDoVIPER.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -248,6 +278,7 @@
 			children = (
 				3FEE8E3327649DC3009CF1A0 /* Strings.swift */,
 				3F1D598C276B118800565A6E /* CoreDataWorker.swift */,
+				3F58EAD62770595100CBACAC /* CoreDataRelayContainer.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -385,18 +416,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F58EAD0276F951E00CBACAC /* ToDoItem+CoreDataClass.swift in Sources */,
 				3F29404127608CFE0041738D /* EditInteractor.swift in Sources */,
 				3FDCB9E42757449300ACB317 /* MainAssembler.swift in Sources */,
 				3FDCB9EC275744B000ACB317 /* MainRouter.swift in Sources */,
+				3F58EAD1276F953700CBACAC /* ToDoItem+CoreDataProperties.swift in Sources */,
+				3F58EAD72770595100CBACAC /* CoreDataRelayContainer.swift in Sources */,
 				3FDCB9E8275744A400ACB317 /* MainPresenter.swift in Sources */,
+				3F7E3C5A276F8E5500EB912E /* ToDoVIPER.xcdatamodeld in Sources */,
 				3FDCB9A82757403B00ACB317 /* AppDelegate.swift in Sources */,
 				3F1D598D276B118800565A6E /* CoreDataWorker.swift in Sources */,
-				3FDCB9B22757403B00ACB317 /* ToDoVIPER.xcdatamodeld in Sources */,
+				3F58EAD5276F962200CBACAC /* Subtask+CoreDataClass.swift in Sources */,
 				3FEE8E3427649DC3009CF1A0 /* Strings.swift in Sources */,
 				3F29404227608CFE0041738D /* EditPresenter.swift in Sources */,
 				3F29404027608CFE0041738D /* EditViewController.swift in Sources */,
 				3FDCB9AA2757403B00ACB317 /* SceneDelegate.swift in Sources */,
 				3FDCB9EA275744A900ACB317 /* MainInteractor.swift in Sources */,
+				3F58EAD4276F962200CBACAC /* Subtask+CoreDataProperties.swift in Sources */,
 				3F29404527608D8C0041738D /* EditAssembler.swift in Sources */,
 				3FDCB9E62757449E00ACB317 /* MainViewController.swift in Sources */,
 				3F29404727608DAA0041738D /* EditRouter.swift in Sources */,

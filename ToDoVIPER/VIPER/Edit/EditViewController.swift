@@ -45,11 +45,13 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 	private var todos: [NSManagedObject] = []
 
 	private var mode: Mode
+	private var data: CoreDataRelayContainer?
 
 	// MARK: - Initialization
 
-	init(mode: Mode) {
+	init(mode: Mode, data: CoreDataRelayContainer? = nil) {
 		self.mode = mode
+		self.data = data
 		super.init(
 			nibName: String(describing: EditViewController.self),
 			bundle: nil
@@ -70,6 +72,7 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		setTitleLabel()
+		presentToDoForEditIfNeeded()
 	}
 
 	// MARK: - UI Assembly
@@ -86,12 +89,19 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 	// MARK: - Methods
 
 	// TODO: - To Interactor
-	@IBAction func saveAction(_ sender: Any) {
-		let itemToSave = getOutletValues()
-
-		presenter?.saveToCoreData(
-			data: itemToSave
-		)
+	@IBAction func finishFlowAction(_ sender: Any) {
+		switch mode {
+		case .edit:
+			fillTransferContainer()
+			presenter?.updateObject(
+				from: data!
+			)
+		case .create:
+			let itemToSave = getOutletValues()
+			presenter?.saveToCoreData(
+				data: itemToSave
+			)
+		}
 
 		dismiss(animated: true, completion: nil)
 	}
@@ -110,5 +120,37 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 		)
 
 		return rawValues
+	}
+
+	private func presentToDoForEditIfNeeded() {
+		guard let toDo = data,
+			  mode == .edit
+		else {
+			return
+		}
+
+		fillOutletValues()
+	}
+
+	private func fillOutletValues() {
+		let toDo = (data as? ToDoItem)
+
+		nameTextField.text = (data as? ToDoItem)?.name
+		statusTextField.text = "\(String(describing: (data as? ToDoItem)?.done))"
+		dueDateTextField.text = "\(String(describing: (data as? ToDoItem)?.dueDate))"
+		subtasksTextField.text = "\(String(describing: (data as? ToDoItem)?.subtasks))"
+	}
+
+	private func fillTransferContainer() {
+		guard let object = data?.object as? ToDoItem
+		else {
+			return
+		}
+
+		let values = getOutletValues()
+		object.name = "\(values.name)"
+		object.done = Bool(exactly: NSNumber(integerLiteral: Int.random(in: 0...1))) ?? false
+		object.dueDate = Date()
+		object.subtasks = NSObject()
 	}
 }

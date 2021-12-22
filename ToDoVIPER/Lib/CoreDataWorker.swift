@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 
+// to entity
 typealias RawInputValues = (
 	name: String,
 	done: String,
@@ -25,7 +26,7 @@ final class CoreDataWorker: CoreDataWorkerProtocol {
 
 	static let shared = CoreDataWorker()
 
-	var dataSource: [NSManagedObject] = []
+	var dataSource: [ToDoItem] = []
 
 	var rawValues: RawInputValues?
 
@@ -42,13 +43,10 @@ final class CoreDataWorker: CoreDataWorkerProtocol {
 		}
 
 		let managedContext = appDelegate.persistentContainer.viewContext
-
-		let fetchRequest = NSFetchRequest<NSManagedObject>(
-			entityName: Strings.ToDoItemModel.entity.rawValue
-		)
+		let toDosFetchRequest: NSFetchRequest<ToDoItem> = ToDoItem.fetchRequest()
 
 		do {
-			dataSource = try managedContext.fetch(fetchRequest)
+			dataSource = try managedContext.fetch(toDosFetchRequest)
 			completion(dataSource)
 		} catch let error as NSError {
 			print("\(error), \(error.userInfo)")
@@ -130,5 +128,35 @@ final class CoreDataWorker: CoreDataWorkerProtocol {
 
 	private func toDate(_ input: String) -> Date {
 		return DateFormatter().date(from: input) ?? Date()
+	}
+
+	func updateObject(from container: CoreDataRelayContainer) {
+		let idx = container.idx
+		(dataSource[idx] as? ToDoItem)?.name = container.object.name
+		(dataSource[idx] as? ToDoItem)?.done = container.object.done
+		(dataSource[idx] as? ToDoItem)?.dueDate = container.object.dueDate
+		(dataSource[idx] as? ToDoItem)?.subtasks = container.object.subtasks
+		(dataSource[idx] as? ToDoItem)?.list = container.object.list
+
+		guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
+		else {
+			return
+		}
+
+		let managedContext = appDelegate.persistentContainer.viewContext
+
+		guard let entity = NSEntityDescription.entity(
+			forEntityName: Strings.ToDoItemModel.entity.rawValue,
+			in: managedContext
+		)
+		else {
+			return
+		}
+
+		do {
+			try managedContext.save()
+		} catch let error as NSError {
+			print("error: \(error.userInfo)")
+		}
 	}
 }

@@ -15,5 +15,6 @@ Roadmap:
 - [] Strings to Enums
 - [] Arch
 - [] CleanCode (by the book)
+- [] pure functions	
 - [] SOLID
 - [] retain cycles
