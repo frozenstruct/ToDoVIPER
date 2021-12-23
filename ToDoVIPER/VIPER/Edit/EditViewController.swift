@@ -42,16 +42,17 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 
 	// MARK: - Properties
 
-	private var todos: [NSManagedObject] = []
-
 	private var mode: Mode
 	private var data: CoreDataRelayContainer?
+	private var lastSavedName: String
 
 	// MARK: - Initialization
 
 	init(mode: Mode, data: CoreDataRelayContainer? = nil) {
 		self.mode = mode
 		self.data = data
+		self.lastSavedName = data?.object.name ?? ""
+
 		super.init(
 			nibName: String(describing: EditViewController.self),
 			bundle: nil
@@ -60,6 +61,7 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 
 	required init?(coder: NSCoder) {
 		mode = .create
+		lastSavedName = ""
 		super.init(coder: coder)
 	}
 
@@ -93,9 +95,9 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 		switch mode {
 		case .edit:
 			fillTransferContainer()
-			presenter?.updateObject(
-				from: data!
-			)
+//			presenter?.updateObject(
+//				from: data!
+//			)
 		case .create:
 			let itemToSave = getOutletValues()
 			presenter?.saveToCoreData(
@@ -123,7 +125,7 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 	}
 
 	private func presentToDoForEditIfNeeded() {
-		guard let toDo = data,
+		guard let _ = data,
 			  mode == .edit
 		else {
 			return
@@ -133,24 +135,49 @@ final class EditViewController: UIViewController, EditViewControllerInput {
 	}
 
 	private func fillOutletValues() {
-		let toDo = (data as? ToDoItem)
-
-		nameTextField.text = (data as? ToDoItem)?.name
-		statusTextField.text = "\(String(describing: (data as? ToDoItem)?.done))"
-		dueDateTextField.text = "\(String(describing: (data as? ToDoItem)?.dueDate))"
-		subtasksTextField.text = "\(String(describing: (data as? ToDoItem)?.subtasks))"
+		nameTextField.text = data?.object.name
+		statusTextField.text = "\(String(describing: data?.object.done))"
+		dueDateTextField.text = "\(String(describing: data?.object.dueDate))"
+		subtasksTextField.text = "\(String(describing: data?.object.subtasks))"
 	}
 
 	private func fillTransferContainer() {
-		guard let object = data?.object as? ToDoItem
+		guard let managedContext = (
+			UIApplication.shared.delegate as? AppDelegate
+		)?.persistentContainer.viewContext
 		else {
 			return
 		}
 
+		let request = ToDoItem.fetchRequest()
+		request.predicate = NSPredicate(
+			format: "name = %@",
+			self.lastSavedName as String
+		)
+
+		var fetchedToDo: [ToDoItem] = []
+
+		do {
+			try fetchedToDo = managedContext.fetch(request)
+		} catch let error as NSError {
+			print("error: \(error.userInfo)")
+		}
+
+		let toDoThatIsNeeded = fetchedToDo.first
+
 		let values = getOutletValues()
-		object.name = "\(values.name)"
-		object.done = Bool(exactly: NSNumber(integerLiteral: Int.random(in: 0...1))) ?? false
-		object.dueDate = Date()
-		object.subtasks = NSObject()
+		toDoThatIsNeeded?.name = "\(values.name)"
+		toDoThatIsNeeded?.done = Bool(exactly: NSNumber(integerLiteral: Int.random(in: 0...1))) ?? false
+		toDoThatIsNeeded?.dueDate = Date()
+		toDoThatIsNeeded?.subtasks = NSObject()
+
+		var _error = NSError()
+
+		do {
+			try managedContext.save()
+		} catch let error as NSError {
+			_error = error
+			print(error)
+		}
 	}
 }

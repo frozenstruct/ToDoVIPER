@@ -9,6 +9,7 @@ import CoreData
 import UIKit
 
 protocol MainViewControllerInput: AnyObject {
+
 	func presentCoreData(_ data: [NSManagedObject])
 }
 
@@ -22,7 +23,7 @@ final class MainViewController: UITableViewController, MainViewControllerInput, 
 
 	// MARK: - Properties
 
-	private var dataSource: [NSManagedObject] = []
+	private var dataSource: [ToDoItem] = []
 
 	// MARK: - Life Cycle
 
@@ -95,10 +96,9 @@ extension MainViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
 		let idx = indexPath.row
 		let currentData = dataSource[indexPath.row]
-		let transferObject = CoreDataRelayContainer(object: currentData as! ToDoItem, idx: idx)
+		let transferObject = CoreDataRelayContainer(object: currentData, idx: idx)
 
 		presenter?.routeToEditScene(
 			from: self,
@@ -137,6 +137,6 @@ extension MainViewController {
 
 extension MainViewController {
 	func presentCoreData(_ data: [NSManagedObject]) {
-		dataSource = data
+		dataSource = (data as? [ToDoItem]) ?? []
 	}
 }

@@ -33,6 +33,7 @@ extension MainRouter {
 			mode: mode,
 			data: data
 		)
+
 		view.present(viewController, animated: true, completion: nil)
 	}
 }
